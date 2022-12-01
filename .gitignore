@@ -1,0 +1,8 @@
+# Workspace
+.vscode
+.flask_session
+__pycache__
+
+# Environment
+.env
+venv

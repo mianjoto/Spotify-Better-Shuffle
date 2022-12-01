@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+<h1>Hello {{name}}!</h1>
+<form action="/currently-playing" method="post">
+    <button type="submit" name="currently-playing" class="btn btn-primary">Currently Playing</button>
+</form>
+{% if currently_playing_track is defined and currently_playing_track is not None %}
+<p>Currently playing: {{currently_playing_track}}.</p>
+{% elif currently_playing_track is defined and currently_playing_track is None %}
+<p>No track is currently playing.</p>
+{% endif %}
+
+
+{% endblock %}
